@@ -1,0 +1,14 @@
+prefix=/opt/arm32_ffmpeg_srt
+exec_prefix=${prefix}
+libdir=/opt/arm32_ffmpeg_srt/lib
+includedir=/opt/arm32_ffmpeg_srt/include
+
+Name: libswscale
+Description: FFmpeg image rescaling library
+Version: 5.5.100
+Requires: 
+Requires.private: libavutil >= 56.31.100
+Conflicts:
+Libs: -L${libdir}  -lswscale 
+Libs.private: -lm
+Cflags: -I${includedir}

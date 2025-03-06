@@ -1,0 +1,12 @@
+prefix=/opt/arm_libsrt
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: srt
+Description: SRT library set
+Version: 1.4.4
+Libs: -L${libdir} -lsrt   
+Libs.private:  -lpthread -lstdc++ -lm -lc
+Cflags: -I${includedir} -I${includedir}/srt
+Requires.private: openssl libcrypto

@@ -1,0 +1,14 @@
+prefix=/opt/arm32_ffmpeg_srt
+exec_prefix=${prefix}
+libdir=/opt/arm32_ffmpeg_srt/lib
+includedir=/opt/arm32_ffmpeg_srt/include
+
+Name: libavcodec
+Description: FFmpeg codec library
+Version: 58.35.100
+Requires: 
+Requires.private: libswresample >= 3.3.100, libavutil >= 56.22.100
+Conflicts:
+Libs: -L${libdir}  -lavcodec 
+Libs.private: -pthread -lm -L/opt/arm_libx264/lib -lx264 -lpthread -lm -ldl -L/opt/arm_libx265_install/lib -lx265 -lstdc++ -lm
+Cflags: -I${includedir}

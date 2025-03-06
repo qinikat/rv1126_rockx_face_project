@@ -1,0 +1,11 @@
+prefix=/opt/arm_libx265_install
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: x265
+Description: H.265/HEVC video encoder
+Version: 0.0
+Libs: -L${libdir} -lx265
+Libs.private: -lstdc++ -lm
+Cflags: -I${includedir}
